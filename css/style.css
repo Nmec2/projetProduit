@@ -1,0 +1,189 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+
+
+   ****RESET CSS TROUVER SUR INTERNET****
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    text-decoration: none;
+}
+
+body {
+    background-color: #DBDCE0;
+}
+
+body::after {
+    position: fixed;
+    content: '';
+    height: 100%;
+    width: 0;
+    top: 0;
+    right: 0;
+    background: linear-gradient(to right bottom, #FF715B, #252323);
+    z-index: -1;
+    animation: body-bg 0.8s ease-in-out forwards;
+}
+
+@keyframes body-bg {
+    0% {
+        width: 0vw;
+    }
+    100% {
+        width: 50vw;
+    }
+}
+
+/* ********* CLASSE UTILISATION GENERALE ********* */
+
+.row-limit-size {
+    max-width: 1400px;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.center {
+    margin: 0 auto;
+}
+
+/* ***************** HEADER *************** */
+
+.brand {
+    display: block;
+    margin-top: 30px;
+}
+
+.brand > span {
+    color: #FF715B;
+}
+
+#head-bottom {
+    display: flex;
+    justify-content: left;
+    text-transform: uppercase;
+}
+
+#head-bottom > figure > img {
+    margin-left: 70px;
+    display: block;
+}
+
+#head-bottom > nav > ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+#head-bottom > nav > ul > li > a {
+    display: block;
+    height: 100px;
+    padding: 0 30px;
+    line-height: 100px;
+    color: #4C5454;
+    text-decoration: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: relative;
+}
+
+#head-bottom > nav > ul > li > a::after {
+    content: '';
+    position: absolute;
+    bottom: 30px;
+    left: 0px;
+    height: 2.3px;
+    width: 100%;
+    background: #FF715B;
+    border-radius: 20px;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-out;
+}
+
+#head-bottom > nav > ul > li > a:hover::after{
+    transform: scale(0.7);
+}
+
+/* ***************CONTAINER MAIN IMG ****************** */
+
+.img-center{
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+    animation: stylo-idle 3s infinite;
+}
+
+@keyframes stylo-idle {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(15px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+
+/* .container > div {
+    border: 2px solid #fff;
+}
+
+.container > div:hover {
+    height: 600px;
+    border-radius: 10px;
+    border: 2px solid #FF715B;
+    background-color: rgba(255, 113, 91, 0.85);
+    transition: all 0.4s ease-in-out;
+} */
+
+
+
+
+/* **************** BUTTON ******************* */
+
+a.button {
+    display: inline-block;
+    height: 47px;
+    line-height: 47px;
+    letter-spacing: 1px;
+    font-size: 1rem;
+    margin-top: 30px;
+    margin-right: 50px;
+    text-align: center;
+    padding: 0px 30px;
+    text-decoration: none;
+    transition: all .2s ease;
+}
+
+.button-orange {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border: 2px solid #FF715B;
+    color: #FF715B;
+}
+
+.button-orange:hover {
+    border: 2px solid #FF715B;
+    background-color: #FF715B;
+    color: #FFF;
+    box-shadow: 2px 1px 8px #FF715B;
+}
